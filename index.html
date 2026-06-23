@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Telegram Clone</title>
+  <title>Hafland X — мессенджер от Hafa Studio</title>
+  <meta name="description" content="Hafland X — защищённый мессенджер нового поколения. Разработан Hafa Studio." />
+  <meta name="author" content="Hafa Studio — Володин Владислав Вадимович" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/main.css" />
@@ -14,13 +16,20 @@
   <!-- ===== SPLASH SCREEN ===== -->
   <div id="splash" class="splash">
     <div class="splash__logo">
+      <!-- Логотип Hafland X: стилизованная буква H с акцентом X -->
       <svg class="splash__plane" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="24" cy="24" r="24" fill="#2b5fde"/>
-        <path class="plane-path" d="M10 24L38 12L30 36L23 28L10 24Z" fill="white"/>
-        <path class="plane-wing" d="M23 28L38 12L26 32L23 28Z" fill="#c8daf5"/>
+        <!-- H shape -->
+        <rect x="12" y="13" width="4" height="22" rx="1.5" fill="white"/>
+        <rect x="32" y="13" width="4" height="22" rx="1.5" fill="white"/>
+        <rect x="14" y="21.5" width="20" height="5" rx="1.5" fill="white"/>
+        <!-- X accent -->
+        <line x1="20" y1="14" x2="28" y2="22" stroke="#c8daf5" stroke-width="2.2" stroke-linecap="round"/>
+        <line x1="28" y1="14" x2="20" y2="22" stroke="#c8daf5" stroke-width="2.2" stroke-linecap="round"/>
       </svg>
     </div>
-    <div class="splash__brand">Telegram</div>
+    <div class="splash__brand">Hafland X</div>
+    <div class="splash__tagline">by Hafa Studio</div>
     <div class="splash__dots">
       <span></span><span></span><span></span>
     </div>
@@ -37,11 +46,14 @@
       <div class="auth__logo">
         <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="24" cy="24" r="24" fill="#2b5fde"/>
-          <path d="M10 24L38 12L30 36L23 28L10 24Z" fill="white"/>
-          <path d="M23 28L38 12L26 32L23 28Z" fill="#c8daf5"/>
+          <rect x="12" y="13" width="4" height="22" rx="1.5" fill="white"/>
+          <rect x="32" y="13" width="4" height="22" rx="1.5" fill="white"/>
+          <rect x="14" y="21.5" width="20" height="5" rx="1.5" fill="white"/>
+          <line x1="20" y1="14" x2="28" y2="22" stroke="#c8daf5" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="28" y1="14" x2="20" y2="22" stroke="#c8daf5" stroke-width="2.2" stroke-linecap="round"/>
         </svg>
       </div>
-      <h1 class="auth__title">Telegram</h1>
+      <h1 class="auth__title">Hafland X</h1>
       <p class="auth__subtitle">Войдите в свой аккаунт</p>
 
       <div class="auth__tabs">
@@ -120,6 +132,13 @@
           <div class="btn__ripple-container"></div>
         </button>
       </div>
+
+      <!-- Юридическая подпись на экране входа -->
+      <p class="auth__legal">
+        Регистрируясь, вы соглашаетесь с
+        <a href="#" class="auth__legal-link">Условиями использования</a> и
+        <a href="#" class="auth__legal-link">Политикой конфиденциальности</a> Hafland X.
+      </p>
     </div>
   </div>
 
@@ -132,6 +151,9 @@
         <button class="sidebar__menu-btn" id="menuBtn" aria-label="Меню">
           <span></span><span></span><span></span>
         </button>
+        <div class="sidebar__brand-wrap">
+          <span class="sidebar__brand-name">Hafland X</span>
+        </div>
         <div class="sidebar__search-wrap">
           <svg class="sidebar__search-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7 14 5 12 5 9.5S7 5 9.5 5 14 7 14 9.5 12 14 9.5 14z" fill="currentColor"/></svg>
           <input type="text" id="searchInput" class="sidebar__search" placeholder="Поиск" />
@@ -161,6 +183,11 @@
           <p>Нет чатов</p>
           <span>Нажмите на иконку меню, чтобы начать новый чат</span>
         </div>
+      </div>
+
+      <!-- Footer с юридической информацией -->
+      <div class="sidebar__footer">
+        <span>Hafland X &copy; 2025 Hafa Studio</span>
       </div>
     </aside>
 
@@ -203,12 +230,17 @@
         <div class="chat__empty-icon">
           <svg viewBox="0 0 120 120" fill="none">
             <circle cx="60" cy="60" r="60" fill="#17212b"/>
-            <path d="M25 60L75 35L65 85L52 70L25 60Z" fill="#2b5fde" opacity="0.8"/>
-            <path d="M52 70L75 35L58 78L52 70Z" fill="#5288c1"/>
+            <!-- H logo in empty state -->
+            <rect x="35" y="33" width="10" height="54" rx="4" fill="#2b5fde" opacity="0.8"/>
+            <rect x="75" y="33" width="10" height="54" rx="4" fill="#2b5fde" opacity="0.8"/>
+            <rect x="37" y="53" width="46" height="14" rx="4" fill="#2b5fde" opacity="0.8"/>
+            <line x1="50" y1="36" x2="70" y2="56" stroke="#5288c1" stroke-width="4" stroke-linecap="round"/>
+            <line x1="70" y1="36" x2="50" y2="56" stroke="#5288c1" stroke-width="4" stroke-linecap="round"/>
           </svg>
         </div>
         <h2>Выберите чат</h2>
         <p>Выберите чат из списка слева или начните новый</p>
+        <span class="chat__empty-brand">Hafland X — защищённый мессенджер</span>
       </div>
 
       <!-- Active Chat -->
@@ -287,6 +319,12 @@
             <span class="profile-stat__value" id="statMessages">0</span>
             <span class="profile-stat__label">Сообщений</span>
           </div>
+        </div>
+        <!-- Юридическая информация в профиле -->
+        <div class="profile-legal">
+          <p>Hafland X v1.0</p>
+          <p>&copy; 2025 Hafa Studio</p>
+          <p>Разработчик: Володин Владислав Вадимович</p>
         </div>
       </div>
     </div>

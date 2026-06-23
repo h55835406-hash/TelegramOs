@@ -734,3 +734,77 @@ body {
   .chat__back-btn { display: flex !important; }
   .profile-panel { left: 0; }
 }
+
+/* ========================
+   HAFLAND X BRAND STYLES
+======================== */
+
+/* Splash tagline */
+.splash__tagline {
+  font-size: 13px;
+  color: var(--text-sec);
+  letter-spacing: 0.06em;
+  margin-top: -8px;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+/* Auth legal note */
+.auth__legal {
+  font-size: 11px;
+  color: var(--text-hint);
+  text-align: center;
+  margin-top: 16px;
+  line-height: 1.5;
+}
+.auth__legal-link {
+  color: var(--accent);
+  text-decoration: none;
+}
+.auth__legal-link:hover {
+  text-decoration: underline;
+}
+
+/* Sidebar brand name (shown when search is closed) */
+.sidebar__brand-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 4px;
+}
+.sidebar__brand-name {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+/* Sidebar footer legal */
+.sidebar__footer {
+  padding: 10px 16px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+  font-size: 10px;
+  color: var(--text-hint);
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+/* Empty chat brand label */
+.chat__empty-brand {
+  font-size: 12px;
+  color: var(--text-hint);
+  margin-top: 8px;
+  display: block;
+}
+
+/* Profile legal block */
+.profile-legal {
+  margin-top: 24px;
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.03);
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-hint);
+  line-height: 1.8;
+}

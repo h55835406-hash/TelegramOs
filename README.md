@@ -1,6 +1,21 @@
-# Telegram Clone
+# Hafland X
 
-Полноценный мессенджер в стиле Telegram с Firebase Realtime Database.
+**Hafland X** — защищённый мессенджер нового поколения на Firebase Realtime Database.
+
+---
+
+## Правовая информация
+
+**Продукт:** Hafland X  
+**Правообладатель:** Hafa Studio  
+**Разработчик:** Володин Владислав Вадимович  
+**Версия:** 1.0  
+**Год:** 2025  
+
+Все права на программное обеспечение, дизайн и торговые марки принадлежат Hafa Studio.  
+Несанкционированное копирование, распространение или модификация продукта запрещены.
+
+---
 
 ## Быстрый старт
 
@@ -9,8 +24,8 @@
 1. Перейдите на [console.firebase.google.com](https://console.firebase.google.com)
 2. Нажмите **Add project** → введите название → создайте
 3. В меню слева: **Build → Realtime Database → Create database**
-4. Выберите регион, установите правила как **test mode** (или see below)
-5. В меню слева: **Project Settings (шестерёнка) → General → Your apps → Web (`</>`)** → зарегистрируйте приложение
+4. Выберите регион, установите правила как **test mode**
+5. **Project Settings (шестерёнка) → General → Your apps → Web** → зарегистрируйте приложение
 6. Скопируйте объект `firebaseConfig`
 
 ### 2. Вставьте ключи
@@ -31,7 +46,7 @@ const firebaseConfig = {
 
 ### 3. Правила базы данных
 
-В Firebase Console → Realtime Database → Rules вставьте:
+В Firebase Console → Realtime Database → Rules:
 
 ```json
 {
@@ -67,19 +82,17 @@ git push -u origin main
 
 Затем в настройках репозитория: **Settings → Pages → Source: main / root**.
 
-Сайт будет доступен по адресу: `https://ВАШ_НИК.github.io/ВАШ_РЕПО/`
-
 ---
 
 ## Структура проекта
 
 ```
-telegram-clone/
+hafland-x/
 ├── index.html
 ├── README.md
 ├── css/
-│   ├── main.css          # Основные стили
-│   └── animations.css    # Все анимации
+│   ├── main.css          # Основные стили + брендинг Hafland X
+│   └── animations.css    # Анимации
 └── js/
     ├── firebase-config.js  # <-- ВСТАВИТЬ КЛЮЧИ СЮДА
     ├── auth.js             # Регистрация / вход / выход
@@ -98,5 +111,9 @@ telegram-clone/
 - Поиск по чатам
 - Профиль со статистикой
 - Полная адаптивность (мобильный)
-- Тёмная тема в стиле Telegram
-- Куча анимаций
+- Тёмная тема
+- Анимации
+
+---
+
+*Hafland X — продукт Hafa Studio. Разработчик: Володин Владислав Вадимович.*
