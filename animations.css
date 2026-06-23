@@ -1,0 +1,139 @@
+/* ========================
+   KEYFRAMES
+======================== */
+
+@keyframes splashBounce {
+  0%   { opacity:0; transform: scale(.3) rotate(-15deg); }
+  60%  { opacity:1; transform: scale(1.15) rotate(5deg); }
+  80%  { transform: scale(.93) rotate(-2deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes fadeInUp {
+  from { opacity:0; transform: translateY(16px); }
+  to   { opacity:1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity:0; }
+  to   { opacity:1; }
+}
+
+@keyframes cardEntrance {
+  from { opacity:0; transform: translateY(40px) scale(.96); }
+  to   { opacity:1; transform: translateY(0) scale(1); }
+}
+
+@keyframes modalIn {
+  from { opacity:0; transform: scale(.88) translateY(16px); }
+  to   { opacity:1; transform: scale(1) translateY(0); }
+}
+
+@keyframes dropdownIn {
+  from { opacity:0; transform: scale(.9) translateY(-8px); }
+  to   { opacity:1; transform: scale(1) translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity:0; transform: translateX(-24px); }
+  to   { opacity:1; transform: translateX(0); }
+}
+
+@keyframes slideInFromLeft {
+  from { opacity:0; transform: translateX(-100%); }
+  to   { opacity:1; transform: translateX(0); }
+}
+
+@keyframes msgIn {
+  from { opacity:0; transform: scale(.85) translateY(8px); }
+  to   { opacity:1; transform: scale(1) translateY(0); }
+}
+
+@keyframes dotPulse {
+  0%, 100% { opacity:.3; transform: scale(.85); }
+  50%       { opacity:1;  transform: scale(1.15); }
+}
+
+@keyframes typingBounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  30%            { transform: translateY(-6px); }
+}
+
+@keyframes rippleExpand {
+  to { transform: scale(4); opacity: 0; }
+}
+
+@keyframes shakeX {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-8px); }
+  40%       { transform: translateX(8px); }
+  60%       { transform: translateX(-6px); }
+  80%       { transform: translateX(6px); }
+}
+
+@keyframes orbFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(30px, -20px) scale(1.05); }
+  66%       { transform: translate(-20px, 15px) scale(.95); }
+}
+
+@keyframes onlinePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(77,205,94,.5); }
+  50%       { box-shadow: 0 0 0 4px rgba(77,205,94,0); }
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-12px); }
+}
+
+@keyframes badgePop {
+  from { transform: scale(0); }
+  to   { transform: scale(1); }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes sendPop {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(.85) rotate(-10deg); }
+  60%  { transform: scale(1.15) rotate(5deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes planeFly {
+  0%   { transform: translate(0,0) rotate(-15deg) scale(1); opacity:1; }
+  70%  { transform: translate(120px,-80px) rotate(-25deg) scale(.6); opacity:.6; }
+  71%  { transform: translate(-60px,40px) rotate(-15deg) scale(.6); opacity:0; }
+  100% { transform: translate(0,0) rotate(0deg) scale(1); opacity:1; }
+}
+
+@keyframes checkAppear {
+  from { stroke-dashoffset: 20; opacity:0; }
+  to   { stroke-dashoffset: 0; opacity:1; }
+}
+
+/* SVG plane path animation on load */
+.plane-path {
+  animation: planeBodyPulse 3s ease-in-out infinite;
+  transform-origin: center;
+}
+.plane-wing {
+  animation: planeWingShimmer 3s ease-in-out infinite;
+}
+@keyframes planeBodyPulse {
+  0%,100% { opacity:1; }
+  50%      { opacity:.85; }
+}
+@keyframes planeWingShimmer {
+  0%,100% { opacity:.7; }
+  50%      { opacity:1; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration:.01ms !important; transition-duration:.01ms !important; }
+}
